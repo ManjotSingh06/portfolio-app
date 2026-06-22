@@ -10,9 +10,10 @@ const Navbar = () => (
           <Link to="/Contact" className={`btn ${location.pathname === './Contact' ? 'active' : ''}`}>Contact</Link>
           <Link to="/Skills" className={`btn ${location.pathname === './Skills' ? 'active' : ''}`}>Skills</Link>
           <Link to="/Projects" className={`btn ${location.pathname === './Projects' ? 'active' : ''}`}>Projects</Link>
+          <Link to="/Resume" className={`btn ${location.pathname === './Resume' ? 'active' : ''}`}>Resume</Link>
 
-          <svg className="outline" overflow="visible" width={400} height={60} viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg">
-            <rect className="rect" pathLength={100} x={0} y={0} width={400} height={60} fill="transparent" strokeWidth={5} />
+          <svg className="outline" overflow="visible" width={500} height={60} viewBox="0 0 500 60" xmlns="http://www.w3.org/2000/svg">
+            <rect className="rect" pathLength={100} x={0} y={0} width={500} height={60} fill="transparent" strokeWidth={5} />
           </svg>
         </div>
       </div>
@@ -37,7 +38,8 @@ const StyledWrapper = styled.div`
 
   .nav {
     position: relative;
-    width: 400px;
+    width: fit-content;
+    min-width: 500px;
     height: 60px;
     margin: 0 auto;
     margin-top: 2rem;
@@ -59,6 +61,7 @@ const StyledWrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     padding: 0.5em;
+    ;
   }
 
   .btn {
@@ -75,22 +78,27 @@ const StyledWrapper = styled.div`
 
   .btn:nth-child(1):hover ~ svg .rect {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0 2 8 73.3 8 10.7;
+    stroke-dasharray: 0 0.8 8 77.2 8 10.7;
   }
 
   .btn:nth-child(2):hover ~ svg .rect {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+    stroke-dasharray: 0 8.6 9.5 58.3 9.5 31.6;
   }
 
   .btn:nth-child(3):hover ~ svg .rect {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+    stroke-dasharray: 0 17.5 8.5 42.5 8.5 55.5;
   }
 
   .btn:nth-child(4):hover ~ svg .rect {
     stroke-dashoffset: 0;
-    stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+    stroke-dasharray: 0 25.7 8.9 25.2 8.9 76;
+  }
+
+  .btn:nth-child(5):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 35.5 8.5 6.5 8.5 78.8;
   }
 
   .btn:hover ~ .outline .rect {
